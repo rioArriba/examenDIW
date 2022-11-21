@@ -1,0 +1,77 @@
+@function getFontSize($size) {
+    @return map-get($font-size, $size);
+}
+
+@function getFontSizeKeys() {
+    @return map-keys($font-size);
+}
+@function getVerticalGap($key) {
+    @return nth($gap, $key + 1);
+}
+
+@function getHorizontalGap($key) {
+    @return nth($gap, $key + 1);
+}
+
+@function getGapKeys() {
+    $resultado:();
+    @for $i from 0 to length($gap) {
+        $resultado:append($resultado,$i);
+    }
+    @return $resultado;
+}
+
+@function getBoxShadow($size) {
+    @return unquote(nth($box-shadow, $size + 1));
+}
+
+@function getBoxShadowKeys() {
+    $resultado:();
+    @for $i from 0 to length($box-shadow) {
+        $resultado:append($resultado,$i);
+    }
+    @return $resultado;
+}
+
+@function getColor($color, $key) {
+    @return nth(map-get($colors, $color), $key + 1);
+}
+
+@function getColorKeys() {
+    @return map-keys($colors);
+}
+@function getVariantesColorsKeys() {
+    $resultado:();
+    @for $i from 0 to length(map-get($colors, 'rojo')) {
+        $resultado:append($resultado, $i);
+    }
+    @return $resultado;
+}
+
+@function pow($number, $exponent) {
+    $value: 1;  
+    @if $exponent > 0 {
+      @for $i from 1 through $exponent {
+        $value: $value * $number;
+      }
+    } @else if $exponent < 0 {
+      @for $i from 1 through -$exponent {
+        $value:calc($value / $number);
+      }
+    }  
+    @return $value;
+  }
+
+  @function getPaddingExponents() {
+    $valor:();
+    @for $i from -3 to 7 {
+        $valor:append($valor,$i);
+    }
+    @return $valor;
+  }
+
+  @function getPaddingSize($key) {               
+            @return pow(1.2, $key) * 16px;
+    }
+
+  

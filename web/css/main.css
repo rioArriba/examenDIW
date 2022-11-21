@@ -1,0 +1,58 @@
+/*
+@import 
+'02_base/_reset.scss';
+
+@import 
+'03_layout/l-flex';
+
+
+@import 
+'04_components/c-panel.scss';
+
+@import  
+'06_global/g--clear-list',
+'06_global/g--box-shadow',
+'06_global/g--font-size',
+'06_global/g--color',
+'06_global/g--padding'; */
+.g--padding-3s {
+  padding: 9.2592592593px;
+}
+
+.g--padding-2s {
+  padding: 11.1111111111px;
+}
+
+.g--padding-1s {
+  padding: 13.3333333333px;
+}
+
+.g--padding {
+  padding: 16px;
+}
+
+.g--padding-1l {
+  padding: 19.2px;
+}
+
+.g--padding-2l {
+  padding: 23.04px;
+}
+
+.g--padding-3l {
+  padding: 27.648px;
+}
+
+.g--padding-4l {
+  padding: 33.1776px;
+}
+
+.g--padding-5l {
+  padding: 39.81312px;
+}
+
+.g--padding-6l {
+  padding: 47.775744px;
+}
+
+/*# sourceMappingURL=main.css.map */
